@@ -14,10 +14,13 @@ export class FormulaireComponent implements OnInit {
     description: "lorem ipsum une belle desciption de merde",
     image: "assets/header-pic.png"
   };
-  onSubmit(e) {
-    e.preventdefault();
+  onSubmit($event) {
+    $event.preventDefault();
+
     // form submitted
     console.log("form submitted");
+    alert("Cadeau de merde ajouté");
+    window.location.reload();
   }
   constructor() {}
 
