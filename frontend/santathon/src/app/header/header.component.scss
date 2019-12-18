@@ -1,0 +1,18 @@
+@import "../../styles.scss";
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: $backgroundColor;
+  h1 {
+    font-size: 70px;
+    font-family: "Life Savers", cursive;
+    color: white;
+    font-weight: bold;
+  }
+  img {
+    width: 115px;
+  }
+}
