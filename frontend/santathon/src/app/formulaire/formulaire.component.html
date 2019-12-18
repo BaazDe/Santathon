@@ -1,0 +1,35 @@
+<p>Propose un nouveau cadeau!</p>
+<h2>{{ newgift.name | uppercase }} Details</h2>
+<div><span>id: </span>{{ newgift.id }}</div>
+<div><span>name: </span>{{ newgift.name }}</div>
+
+<form (ngSubmit)="onSubmit(form)">
+  <div>
+    <label for="name">Nom</label>
+    <input name="name" type="text" [(ngModel)]="newgift.name" required />
+  </div>
+  <div>
+    <label for="price">Prix</label>
+    <input name="price" type="number" [(ngModel)]="newgift.price" required />
+  </div>
+  <div>
+    <label for="link">Lien</label>
+    <input name="link" type="text" [(ngModel)]="newgift.link" required />
+  </div>
+  <div>
+    <label for="description">Commentaire</label>
+    <input
+      name="description"
+      type="text"
+      required
+      [(ngModel)]="newgift.description"
+    />
+  </div>
+  <div>
+    <label for="image">Lien de l'image</label>
+    <input name="image" type="text" [(ngModel)]="newgift.image" required />
+  </div>
+  <button type="reset">Restaurer</button>
+  <button type="submit">Sauvegarder</button>
+</form>
+<img [src]="newgift.image" />

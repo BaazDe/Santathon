@@ -1,0 +1,26 @@
+@import "../../styles.scss";
+
+* {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  label {
+    text-align: center;
+  }
+
+  input {
+    width: 50%;
+    min-width: 300px;
+  }
+  input:focus {
+    background-color: $backgroundColor;
+    color: white;
+  }
+  button {
+    flex-direction: row;
+    width: 25%;
+    background-color: $backgroundColor;
+    color: white;
+  }
+}
