@@ -10,7 +10,7 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {}
 
-  headerPic: string = "../assets/header-pic.png";
+  headerPic: string = "../assets/logo_wcs.png";
   fcb: string = "../assets/fcb_logo.svg";
   insta: string = "../assets/insta_logo.svg";
   twitter: string = "../assets/twitter_logo.svg";
