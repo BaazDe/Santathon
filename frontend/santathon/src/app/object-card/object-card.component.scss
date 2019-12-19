@@ -1,0 +1,66 @@
+@import "../../styles.scss";
+
+.objectCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .objectCard-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 30px;
+    width: 40%;
+    min-width: 500px;
+    background-color: $backgroundColor;
+    border-radius: 8px;
+    .objectCard-image {
+      width: 50%;
+    }
+    div img {
+      width: 90%;
+      margin: 10px;
+      border-radius: 8px;
+    }
+    .objectCard-info {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      margin: 13px;
+      width: 50%;
+      border-radius: 8px;
+      div h2 {
+        font-size: 30px;
+        margin: 6px;
+      }
+      div p {
+        font-size: 18px;
+        margin: 20px 6px;
+      }
+      div a {
+        margin: 6px;
+      }
+    }
+    .objectCard-button {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 10px;
+      button {
+        width: 40%;
+        padding: 5px;
+        border: none;
+        font-size: 18px;
+      }
+      .yes-button {
+        background-color: green;
+      }
+      .yes-button p,
+      .no-button p {
+        font-size: 12px;
+        margin: 0;
+      }
+      .no-button {
+        background-color: red;
+      }
+    }
+  }
+}
