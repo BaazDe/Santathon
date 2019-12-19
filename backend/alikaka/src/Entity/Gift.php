@@ -36,6 +36,7 @@ class Gift
     private $image;
 
     /**
+<<<<<<< HEAD
      * @ORM\OneToMany(targetEntity="App\Entity\Vote", mappedBy="Gift", orphanRemoval=true)
      */
     private $votes;
@@ -50,6 +51,11 @@ class Gift
         $this->votes = new ArrayCollection();
         $this->comments = new ArrayCollection();
     }
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description;
 
     public function getId(): ?int
     {
@@ -150,7 +156,16 @@ class Gift
                 $comment->setGift(null);
             }
         }
+    }
 
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
         return $this;
     }
 }
