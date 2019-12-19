@@ -2,12 +2,12 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
+ * @ApiResource()
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User implements UserInterface
@@ -36,14 +36,9 @@ class User implements UserInterface
     private $password;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Vote", mappedBy="user")
+     * @ORM\Column(type="string", length=255, unique=true)
      */
-    private $votes;
-
-    public function __construct()
-    {
-        $this->votes = new ArrayCollection();
-    }
+    private $pseudo;
 
     public function getId(): ?int
     {
@@ -123,33 +118,14 @@ class User implements UserInterface
         // $this->plainPassword = null;
     }
 
-    /**
-     * @return Collection|Vote[]
-     */
-    public function getVotes(): Collection
+    public function getPseudo(): ?string
     {
-        return $this->votes;
+        return $this->pseudo;
     }
 
-    public function addVote(Vote $vote): self
+    public function setPseudo(string $pseudo): self
     {
-        if (!$this->votes->contains($vote)) {
-            $this->votes[] = $vote;
-            $vote->setUser($this);
-        }
-
-        return $this;
-    }
-
-    public function removeVote(Vote $vote): self
-    {
-        if ($this->votes->contains($vote)) {
-            $this->votes->removeElement($vote);
-            // set the owning side to null (unless already changed)
-            if ($vote->getUser() === $this) {
-                $vote->setUser(null);
-            }
-        }
+        $this->pseudo = $pseudo;
 
         return $this;
     }
