@@ -1,4 +1,4 @@
-<div class="objectCard">
+<!-- <div class="objectCard">
   <div *ngFor="let gift of gift" class="objectCard-container">
     <div class="objectCard-image">
       <img [src]="gift.img" alt="gift" />
@@ -17,6 +17,16 @@
           {{ gift.no_input }}
           <p>Non tu as le seum ultime !</p>
         </button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="objectCard">
+  <div *ngFor="let pokemon of pokemon" class="objectCard-container">
+    <div class="objectCard-info">
+      <div>
+        <h2>{{ pokemon.name }}</h2>
       </div>
     </div>
   </div>

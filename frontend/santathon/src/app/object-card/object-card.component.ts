@@ -11,12 +11,19 @@ export class ObjectCardComponent implements OnInit {
   constructor(private giftService: GiftService) {}
 
   ngOnInit() {
-    this.getGift();
+    this.getPokemon();
+    console.log(this.pokemon);
   }
 
   getGift(): void {
     this.gift = this.giftService.getGift();
   }
+
+  getPokemon() {
+    this.pokemon = this.giftService.getpokemon();
+  }
+
+  pokemon;
 
   gift: Gift[];
 }
