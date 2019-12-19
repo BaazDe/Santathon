@@ -9,7 +9,7 @@
     justify-content: space-around;
     margin: 20px 30px;
     width: 40%;
-    min-width: 450px;
+    min-width: 500px;
     background-color: $backgroundColor;
     border-radius: 8px;
     .objectCard-image {
@@ -48,9 +48,15 @@
         width: 40%;
         padding: 5px;
         border: none;
+        font-size: 18px;
       }
       .yes-button {
         background-color: green;
+      }
+      .yes-button p,
+      .no-button p {
+        font-size: 12px;
+        margin: 0;
       }
       .no-button {
         background-color: red;
