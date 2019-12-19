@@ -1,11 +1,18 @@
 <div class="header-container">
-  <img [src]="headerPic" alt="filthy dog" />
+  <img class="header-img" [src]="headerPic" alt="filthy dog" />
   <h1 routerLink="/" routerLinkActive="active">{{ title }}</h1>
-  <img [src]="headerPic" alt="filthy dog" />
+  <div id="easteregg">
+    <img class="header-img" [src]="headerPic" alt="filthy dog" /><img
+      class="hiddenimg"
+      [src]="headerPic"
+      alt="filthy dog"
+    />
+  </div>
   <div class="connexion-link" (click)="handleModal()">
     Connexion / Inscription
   </div>
 </div>
+
 <ul class="navbar-container">
   <li>Meilleurs cadeaux</li>
   <li>Nouveaux cadeaux</li>
