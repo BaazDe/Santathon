@@ -11,13 +11,13 @@ import { Observable } from "rxjs";
 export class GiftService {
   constructor(private http: HttpClient) {}
 
-  private pokemonUrl = "http://localhost:4000/child";
+  private apiUrl = "http://localhost:8000/api/gifts.json";
 
   getGift(): Gift[] {
     return GIFT;
   }
 
   getPokemon(): Observable<Pokemon[]> {
-    return this.http.get<Pokemon[]>(this.pokemonUrl);
+    return this.http.get<Pokemon[]>(this.apiUrl);
   }
 }
