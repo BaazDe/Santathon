@@ -9,6 +9,7 @@ import { FormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { ObjectCardComponent } from "./object-card/object-card.component";
 import { HttpClientModule } from "@angular/common/http";
+import { ModalComponent } from './modal/modal.component';
 
 const appRoutes: Routes = [
   { path: "addagift", component: FormulaireComponent },
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     FormulaireComponent,
-    ObjectCardComponent
+    ObjectCardComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
