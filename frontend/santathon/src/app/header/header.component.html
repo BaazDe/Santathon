@@ -2,9 +2,48 @@
   <img [src]="headerPic" alt="filthy dog" />
   <h1 routerLink="/" routerLinkActive="active">{{ title }}</h1>
   <img [src]="headerPic" alt="filthy dog" />
+  <div class="connexion-link" (click)="handleModal()">
+    Connexion / Inscription
+  </div>
 </div>
 <ul class="navbar-container">
   <li>Meilleurs cadeaux</li>
   <li>Nouveaux cadeaux</li>
   <li routerLink="/addagift" routerLinkActive="active">Proposer un cadeau</li>
 </ul>
+
+<div class="modal" [ngStyle]="{ display: displayModal ? 'block' : 'none' }">
+  <div class="modal-content">
+    <div class="close-modal" (click)="handleModal()">Fermer</div>
+    <div class="modal-content2">
+      <div>Connexion</div>
+      <form>
+        <div class="form-modal">
+          <label for="email">Email</label>
+          <input name="email" type="text" required />
+        </div>
+        <div class="form-modal">
+          <label for="price">Mot de passe</label>
+          <input name="password" type="password" required />
+        </div>
+        <button type="submit">Se connecter</button>
+      </form>
+      <div>Pas encore inscrit?</div>
+      <form>
+        <div class="form-modal">
+          <label for="email">Email</label>
+          <input name="email" type="text" required />
+        </div>
+        <div class="form-modal">
+          <label for="pseudo">Pseudo</label>
+          <input name="pseudo" type="text" required />
+        </div>
+        <div class="form-modal">
+          <label for="password">Mot de passe</label>
+          <input name="password" type="password" required />
+        </div>
+        <button class="button" type="submit">Créer son compte</button>
+      </form>
+    </div>
+  </div>
+</div>
