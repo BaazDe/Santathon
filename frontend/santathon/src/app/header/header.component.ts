@@ -12,4 +12,10 @@ export class HeaderComponent implements OnInit {
 
   title: string = "La caverne d'Alikaka";
   headerPic: string = "../assets/header-pic.png";
+  displayModal: boolean = false;
+
+  handleModal() {
+    console.log("cliqué");
+    return (this.displayModal = !this.displayModal);
+  }
 }
