@@ -1,3 +1,15 @@
+@import "../styles.scss";
+
 .container {
-  background-color: rgb(175, 171, 171);
+  background-color: $mainBackgroundColor;
+}
+
+.body-container {
+  min-height: calc(100vh - 28vh);
+}
+
+@media screen and (max-width: 960px) {
+  .body-container {
+    min-height: calc(100vh - 55vh);
+  }
 }
