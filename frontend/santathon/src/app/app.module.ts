@@ -7,10 +7,12 @@ import { FooterComponent } from "./footer/footer.component";
 import { FormulaireComponent } from "./formulaire/formulaire.component";
 import { FormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
-import { ObjectCardComponent } from './object-card/object-card.component';
+import { ObjectCardComponent } from "./object-card/object-card.component";
 
 const appRoutes: Routes = [
-  { path: "addagift", component: FormulaireComponent }
+  { path: "addagift", component: FormulaireComponent },
+  { path: "home", component: ObjectCardComponent },
+  { path: "", redirectTo: "home", pathMatch: "full" }
 ];
 
 @NgModule({
@@ -18,7 +20,7 @@ const appRoutes: Routes = [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    FormulaireComponent
+    FormulaireComponent,
     ObjectCardComponent
   ],
   imports: [
