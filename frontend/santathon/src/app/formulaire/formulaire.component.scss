@@ -1,0 +1,56 @@
+@import "../../styles.scss";
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+
+  margin: auto;
+  h2 {
+    font-size: 50px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  label {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    padding: 5px 0 5px 0;
+  }
+
+  input,
+  textarea {
+    margin: auto;
+    padding: 5px 0 5px 0;
+
+    margin-top: 5px;
+
+    display: flex;
+    width: 50%;
+    min-width: 300px;
+  }
+  textarea {
+    height: 6em;
+    border-radius: 7px;
+  }
+  input:focus,
+  textarea:focus {
+    background-color: $backgroundColor;
+    color: white;
+  }
+  .button-container {
+    margin-top: 5px;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    button {
+      flex-direction: row;
+      border-radius: 7px;
+      width: 25%;
+      background-color: $backgroundColor;
+      color: white;
+    }
+  }
+}
