@@ -1,19 +1,23 @@
 import { Injectable } from "@angular/core";
 import { GIFT } from "../mock-gift";
 import { Gift } from "../gift";
-import Axios from "axios";
+import { Pokemon } from "../pokemon";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: "root"
 })
 export class GiftService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
+
+  private pokemonUrl = "http://localhost:4000/child";
 
   getGift(): Gift[] {
     return GIFT;
   }
 
-  getpokemon() {
-    Axios.get("https://pokeapi.co/api/v2/pokemon").then(res => res.data[0]);
+  getPokemon(): Observable<Pokemon[]> {
+    return this.http.get<Pokemon[]>(this.pokemonUrl);
   }
 }

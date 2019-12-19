@@ -8,6 +8,7 @@ import { FormulaireComponent } from "./formulaire/formulaire.component";
 import { FormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { ObjectCardComponent } from "./object-card/object-card.component";
+import { HttpClientModule } from "@angular/common/http";
 
 const appRoutes: Routes = [
   { path: "addagift", component: FormulaireComponent },
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true })
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
