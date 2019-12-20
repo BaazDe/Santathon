@@ -1,0 +1,261 @@
+/* You can add global styles to this file, and also import other style files */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: Arial, Helvetica, sans-serif; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  background-color: white; }
+  .header-container .hiddenimg {
+    height: 0;
+    width: 0; }
+  .header-container h1 {
+    font-size: 4vw;
+    font-family: "Life Savers", cursive;
+    color: black;
+    font-weight: bold; }
+  .header-container img {
+    height: 80%; }
+  .header-container #easteregg {
+    height: 100%;
+    align-items: center; }
+  .header-container .connexion-link {
+    cursor: pointer; }
+
+#easteregg:hover .hiddenimg {
+  /* Stay in place */
+  transition: 10s;
+  z-index: 99;
+  /* Sit on top */
+  height: 100vh;
+  width: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  vertical-align: center;
+  margin: auto;
+  transform: rotate(5turn); }
+
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 9vh;
+  background-color: white;
+  margin-top: 5px; }
+  .navbar-container li {
+    width: 100%;
+    text-align: center;
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    transition: 500ms;
+    font-size: 2.5vw;
+    background-color: #488261;
+    color: white;
+    cursor: pointer; }
+  .navbar-container li:hover {
+    transition: 500ms;
+    clip-path: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%); }
+
+.modal {
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  padding: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+  .modal .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    /* Could be more or less, depending on screen size */
+    min-width: 300px;
+    border-radius: 10px; }
+    .modal .modal-content .close-modal {
+      text-align: right;
+      cursor: pointer; }
+    .modal .modal-content .modal-content2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .modal .modal-content .modal-content2 .modal-title {
+        font-size: 30px;
+        padding: 10px; }
+      .modal .modal-content .modal-content2 .form-modal {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+      .modal .modal-content .modal-content2 form {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .modal .modal-content .modal-content2 form input {
+          margin: auto;
+          padding: 5px 0 5px 0;
+          margin-top: 5px;
+          display: flex;
+          width: 50%;
+          min-width: 300px; }
+        .modal .modal-content .modal-content2 form input:focus {
+          background-color: #488261;
+          color: white; }
+        .modal .modal-content .modal-content2 form button {
+          display: flex;
+          justify-content: center;
+          padding: 10px;
+          flex-direction: row;
+          border-radius: 7px;
+          width: 50%;
+          background-color: #488261;
+          color: white;
+          vertical-align: center;
+          text-align: center; }
+
+@media screen and (max-width: 400px) {
+  .navbar-container li {
+    font-size: 12px; } }
+
+/*# sourceMappingURL=header.component.css.map */

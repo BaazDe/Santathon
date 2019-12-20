@@ -1,0 +1,407 @@
+/* You can add global styles to this file, and also import other style files */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: Arial, Helvetica, sans-serif; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+/* You can add global styles to this file, and also import other style files */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: Arial, Helvetica, sans-serif; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+.objectCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .objectCard .objectCard-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 30px;
+    width: 40%;
+    min-width: 500px;
+    background-color: #488261;
+    border-radius: 8px; }
+    .objectCard .objectCard-container .objectCard-image {
+      width: 50%; }
+    .objectCard .objectCard-container div img {
+      width: 90%;
+      margin: 10px;
+      border-radius: 8px; }
+    .objectCard .objectCard-container .objectCard-info {
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      margin: 13px;
+      width: 50%;
+      border-radius: 8px;
+      height: 222px; }
+      .objectCard .objectCard-container .objectCard-info div h2 {
+        font-size: 20px;
+        margin: 6px; }
+      .objectCard .objectCard-container .objectCard-info div a {
+        margin: 6px; }
+    .objectCard .objectCard-container .objectCard-button {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 10px; }
+      .objectCard .objectCard-container .objectCard-button button {
+        width: 40%;
+        padding: 5px;
+        border: none;
+        font-size: 18px; }
+      .objectCard .objectCard-container .objectCard-button .yes-button {
+        background-color: #91bd3a; }
+      .objectCard .objectCard-container .objectCard-button .yes-button p,
+      .objectCard .objectCard-container .objectCard-button .no-button p {
+        font-size: 12px;
+        margin: 0; }
+      .objectCard .objectCard-container .objectCard-button .no-button {
+        background-color: #c72c41; }
+
+.description {
+  font-size: 14px;
+  margin: 20px 6px;
+  height: 80px;
+  overflow-y: scroll; }
+
+.headHeader {
+  margin: 0 auto;
+  width: 60%; }
+  .headHeader h2 {
+    font-weight: bold;
+    font-size: 23px;
+    text-align: center;
+    margin: 5px 0; }
+  .headHeader p {
+    text-align: center;
+    font-size: 18px;
+    margin: 5px 0; }
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto; }
+  .form-container h2 {
+    font-size: 50px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px; }
+  .form-container label {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    padding: 5px 0 5px 0; }
+  .form-container p {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    padding: 5px 0 5px 0; }
+  .form-container .cdiscount-scrapp {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    margin-top: 5px;
+    padding: 5px 0 5px 0; }
+  .form-container input,
+  .form-container textarea {
+    margin: auto;
+    padding: 5px 0 5px 0;
+    margin-top: 5px;
+    display: flex;
+    width: 50%;
+    min-width: 300px; }
+  .form-container textarea {
+    height: 6em;
+    border-radius: 7px; }
+  .form-container input:focus,
+  .form-container textarea:focus {
+    background-color: #488261;
+    color: white; }
+  .form-container .button-container {
+    margin-top: 5px;
+    height: 2em;
+    display: flex;
+    justify-content: center; }
+    .form-container .button-container button {
+      flex-direction: row;
+      border-radius: 7px;
+      width: 25%;
+      background-color: #488261;
+      color: white; }
+
+.objectCard {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center; }
+  .objectCard .apercu-title {
+    font-size: 30px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px; }
+
+/*# sourceMappingURL=formulaire.component.css.map */
