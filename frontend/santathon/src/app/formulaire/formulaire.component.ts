@@ -3,7 +3,7 @@ import { NewGift } from "../newgift";
 import { GiftService } from "../gift.service";
 import { FormsModule } from "@angular/forms";
 import { Pokemon } from "../../pokemon";
-import {Gift} from "../../gift";
+import { Gift } from "../../gift";
 
 @Component({
   selector: "app-formulaire",
@@ -15,7 +15,7 @@ export class FormulaireComponent implements OnInit {
 
   newgift: NewGift = {
     name: "Le cadeau de merde",
-    price: '0',
+    price: 0,
     image: "../assets/header-pic.png",
     description: "une belle description de merde"
   };
@@ -42,8 +42,8 @@ export class FormulaireComponent implements OnInit {
       } as NewGift)
       .subscribe(newGift => {
         this.pushnewGift.push(newGift);
-        alert("Cadeau de merde ajouté")
-        window.location.reload()
+        alert("Cadeau de merde ajouté");
+        window.location.reload();
       });
   }
   // form submitted
