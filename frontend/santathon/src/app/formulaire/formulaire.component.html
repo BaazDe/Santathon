@@ -2,6 +2,17 @@
   <h2>Propose un nouveau cadeau de merde!</h2>
   <form (ngSubmit)="onSubmit($event)">
     <div>
+      <label for="link">Lien</label>
+      <input name="link" type="text" [(ngModel)]="newgift.link" required />
+      <p>
+        S'il s'agit d'un lien CDiscount nous pourrons remplir tous le schamps
+        automatiquement
+      </p>
+      <button class="cdiscount-scrapp" type="button" click="">
+        Remplir les champs
+      </button>
+    </div>
+    <div>
       <label for="name">Nom</label>
       <input name="name" type="text" [(ngModel)]="newgift.name" required />
     </div>
@@ -9,10 +20,7 @@
       <label for="price">Prix</label>
       <input name="price" type="number" [(ngModel)]="newgift.price" required />
     </div>
-    <div>
-      <label for="link">Lien</label>
-      <input name="link" type="text" [(ngModel)]="newgift.link" required />
-    </div>
+
     <div>
       <label for="description">Commentaire</label>
       <textarea
@@ -32,4 +40,28 @@
     </div>
   </form>
 </div>
-<img [src]="newgift.image" />
+
+<div class="objectCard">
+  <div class="apercu-title">Aperçu de votre cadeau de merde!</div>
+  <div class="objectCard-container">
+    <div class="objectCard-image">
+      <img [src]="newgift.image" alt="gift" />
+    </div>
+    <div class="objectCard-info">
+      <div>
+        <h2>{{ newgift.name }}</h2>
+        <p>{{ newgift.description }}</p>
+      </div>
+      <div class="objectCard-button">
+        <button class="yes-button">
+          {{ newgift.yes_input }}
+          <p>Oui c'est de la merde !</p>
+        </button>
+        <button class="no-button">
+          {{ newgift.no_input }}
+          <p>Non tu as le seum ultime !</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

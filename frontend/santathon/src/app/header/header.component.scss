@@ -4,17 +4,43 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 15vh;
-  background-color: $backgroundColor;
+  height: 10vh;
+  background-color: white;
+  .hiddenimg {
+    height: 0;
+    width: 0;
+  }
   h1 {
-    font-size: 6vw;
+    font-size: 4vw;
     font-family: "Life Savers", cursive;
-    color: white;
+    color: $titleColor;
     font-weight: bold;
   }
   img {
-    width: 9%;
+    height: 80%;
   }
+  #easteregg {
+    height: 100%;
+    align-items: center;
+  }
+
+  .connexion-link {
+    cursor: pointer;
+  }
+}
+
+#easteregg:hover .hiddenimg {
+  /* Stay in place */
+  transition: 10s;
+  z-index: 99; /* Sit on top */
+  height: 100vh;
+  width: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  vertical-align: center;
+  margin: auto;
+  transform: rotate(5turn);
 }
 
 .navbar-container {
@@ -23,11 +49,96 @@
   justify-content: space-around;
   align-items: center;
   height: 9vh;
-  background-color: $backgroundColor;
+  background-color: white;
   margin-top: 5px;
+
   li {
+    width: 100%;
+    text-align: center;
+    clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    transition: 500ms;
     font-size: 2.5vw;
+    background-color: $backgroundColor;
     color: white;
+    cursor: pointer;
+  }
+  li:hover {
+    transition: 500ms;
+    clip-path: polygon(0% 0%, 95% 0%, 100% 100%, 5% 100%);
+  }
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  padding: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    min-width: 300px;
+    border-radius: 10px;
+    .close-modal {
+      text-align: right;
+      cursor: pointer;
+    }
+    .modal-content2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .modal-title {
+        font-size: 30px;
+        padding: 10px;
+      }
+      .form-modal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input {
+          margin: auto;
+          padding: 5px 0 5px 0;
+
+          margin-top: 5px;
+
+          display: flex;
+          width: 50%;
+          min-width: 300px;
+        }
+
+        input:focus {
+          background-color: $backgroundColor;
+          color: white;
+        }
+        button {
+          display: flex;
+          justify-content: center;
+          padding: 10px;
+          flex-direction: row;
+          border-radius: 7px;
+          width: 50%;
+          background-color: $backgroundColor;
+          color: white;
+          vertical-align: center;
+          text-align: center;
+        }
+      }
+    }
   }
 }
 

@@ -1,6 +1,9 @@
 export class Pokemon {
-  firstname: string;
-  lastname: string;
-  wisdom: number;
-  label: null;
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  votes: [];
+  comments: [];
+  description: string;
 }

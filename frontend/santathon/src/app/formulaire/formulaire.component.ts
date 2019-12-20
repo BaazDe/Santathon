@@ -12,7 +12,9 @@ export class FormulaireComponent implements OnInit {
     name: "nom nom nom",
     price: 59,
     description: "lorem ipsum une belle desciption de merde",
-    image: "assets/header-pic.png"
+    image: "assets/header-pic.png",
+    yes_input: 0,
+    no_input: 0
   };
   onSubmit($event) {
     $event.preventDefault();

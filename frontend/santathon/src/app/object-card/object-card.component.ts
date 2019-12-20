@@ -19,10 +19,6 @@ export class ObjectCardComponent implements OnInit {
     this.gift = this.giftService.getGift();
   }
 
-  // getpokemon(): void {
-  //   this.pokemon = this.giftService.getpokemon();
-  // }
-
   getpokemon(): void {
     this.giftService
       .getPokemon()

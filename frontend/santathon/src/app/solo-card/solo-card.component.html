@@ -1,0 +1,24 @@
+<div class="objectCard">
+  <div class="objectCard-container">
+    <div class="objectCard-image">
+      <a routerLink="/solocard/{{ gift.id }}" routerLinkActive="active">
+        <img src="{{ gift.image }}" alt="gift"
+      /></a>
+    </div>
+    <div class="objectCard-info">
+      <div>
+        <h2>{{ gift.name }}</h2>
+        <p class="description">{{ gift.description }}</p>
+      </div>
+      <div class="objectCard-button">
+        <button class="yes-button">
+          <p>Oui c'est de la merde !</p>
+        </button>
+        <button class="no-button">
+          <p>Non tu as le seum ultime !</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="enPlus">TROP COOL ANGULAR !</p>
