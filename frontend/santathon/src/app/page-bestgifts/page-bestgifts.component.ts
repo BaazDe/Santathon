@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { GiftService } from "../gift.service";
 import { Gift } from "../../gift";
 import { Pokemon } from "../../pokemon";
+import { NewPokemon } from "../../newPokemon";
 
 @Component({
   selector: "app-page-bestgifts",
@@ -28,6 +29,8 @@ export class PageBestgiftsComponent implements OnInit {
   reducePokemon(): void {}
 
   pokemon: Pokemon[];
+
+  poke: NewPokemon[];
 
   gift: Gift[];
 }
