@@ -15,7 +15,7 @@ const appRoutes: Routes = [
   { path: "addagift", component: FormulaireComponent },
   { path: "home", component: ObjectCardComponent },
   { path: "", redirectTo: "home", pathMatch: "full" },
-  { path: "solocard", component: SoloCardComponent }
+  { path: "solocard/:id", component: SoloCardComponent }
 ];
 
 @NgModule({

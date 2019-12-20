@@ -20,4 +20,10 @@ export class GiftService {
   getPokemon(): Observable<Pokemon[]> {
     return this.http.get<Pokemon[]>(this.apiUrl);
   }
+
+  getGiftById(id: number): Observable<Pokemon[]> {
+    return this.http.get<Pokemon[]>(
+      `http://localhost:8000/api/gifts/${id}.json`
+    );
+  }
 }

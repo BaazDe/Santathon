@@ -3,5 +3,7 @@ export class Pokemon {
   name: string;
   price: number;
   image: string;
+  votes: [];
+  comments: [];
   description: string;
 }
