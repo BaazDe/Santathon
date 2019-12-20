@@ -4,11 +4,11 @@ import { Gift } from "../../gift";
 import { Pokemon } from "../../pokemon";
 
 @Component({
-  selector: "app-page-bestgifts",
-  templateUrl: "./page-bestgifts.component.html",
-  styleUrls: ["./page-bestgifts.component.scss"]
+  selector: "app-page-newgifts",
+  templateUrl: "./page-newgifts.component.html",
+  styleUrls: ["./page-newgifts.component.scss"]
 })
-export class PageBestgiftsComponent implements OnInit {
+export class PageNewgiftsComponent implements OnInit {
   constructor(private giftService: GiftService) {}
 
   ngOnInit() {
@@ -22,7 +22,7 @@ export class PageBestgiftsComponent implements OnInit {
   getpokemon(): void {
     this.giftService
       .getPokemon()
-      .subscribe(pokemon => (this.pokemon = pokemon.splice(5, 3)));
+      .subscribe(pokemon => (this.pokemon = pokemon.splice(1, 5)));
   }
 
   reducePokemon(): void {}
