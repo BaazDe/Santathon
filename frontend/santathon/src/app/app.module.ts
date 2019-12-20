@@ -11,13 +11,15 @@ import { ObjectCardComponent } from "./object-card/object-card.component";
 import { HttpClientModule } from "@angular/common/http";
 import { SoloCardComponent } from "./solo-card/solo-card.component";
 import { PageBestgiftsComponent } from "./page-bestgifts/page-bestgifts.component";
+import { PageNewgiftsComponent } from "./page-newgifts/page-newgifts.component";
 
 const appRoutes: Routes = [
   { path: "addagift", component: FormulaireComponent },
   { path: "home", component: ObjectCardComponent },
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "solocard/:id", component: SoloCardComponent },
-  { path: "bestgifts", component: PageBestgiftsComponent }
+  { path: "bestgifts", component: PageBestgiftsComponent },
+  { path: "newgifts", component: PageNewgiftsComponent }
 ];
 
 @NgModule({
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     FormulaireComponent,
     ObjectCardComponent,
     SoloCardComponent,
-    PageBestgiftsComponent
+    PageBestgiftsComponent,
+    PageNewgiftsComponent
   ],
   imports: [
     BrowserModule,
