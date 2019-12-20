@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import {GiftService} from "../gift.service";
-import {UserService} from "../user.service";
-import {User} from "../../user";
+
+import { UserService } from "../user.service";
+import { User } from "../../user";
 
 @Component({
   selector: "app-header",
@@ -9,10 +9,8 @@ import {User} from "../../user";
   styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent implements OnInit {
-  users: User[]=[];
-  constructor(
-    private UserService: UserService
-  ) {}
+  users: User[] = [];
+  constructor(private UserService: UserService) {}
 
   ngOnInit() {}
 
@@ -29,10 +27,13 @@ export class HeaderComponent implements OnInit {
     email = email.trim();
     pseudo = pseudo.trim();
     password = password.trim();
-    if (!email || !pseudo || !password) { return; }
-    this.UserService.addUser({ email, pseudo, password } as User)
-      .subscribe(user => {
+    if (!email || !pseudo || !password) {
+      return;
+    }
+    this.UserService.addUser({ email, pseudo, password } as User).subscribe(
+      user => {
         this.users.push(user);
-      });
+      }
+    );
   }
 }

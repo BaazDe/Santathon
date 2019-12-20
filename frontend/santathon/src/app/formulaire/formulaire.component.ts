@@ -1,30 +1,58 @@
 import { Component, OnInit } from "@angular/core";
 import { NewGift } from "../newgift";
+import { GiftService } from "../gift.service";
 import { FormsModule } from "@angular/forms";
+import { Pokemon } from "../../pokemon";
+
 @Component({
   selector: "app-formulaire",
   templateUrl: "./formulaire.component.html",
   styleUrls: ["./formulaire.component.scss"]
 })
 export class FormulaireComponent implements OnInit {
+  constructor(private giftService: GiftService) {}
+
   newgift: NewGift = {
-    link: "lien lien",
-    name: "nom nom nom",
-    price: 59,
-    description: "lorem ipsum une belle desciption de merde",
-    image: "assets/header-pic.png",
-    yes_input: 0,
-    no_input: 0
+    id: 0,
+    name: "Le cadeau de merde",
+    price: 0,
+    image: "../assets/header-pic.png",
+    vote: [],
+    comments: [],
+    description: "une belle description de merde"
   };
-  onSubmit($event) {
+  pushnewGift: [] = [];
+
+  onSubmit(
+    $event,
+    id: number,
+    name: string,
+    price: number,
+    image: string,
+    vote: [],
+    comments: [],
+    description: string
+  ) {
     $event.preventDefault();
 
-    // form submitted
-    console.log("form submitted");
-    alert("Cadeau de merde ajouté");
-    window.location.reload();
+    // if (!image || !name) {
+    //   return;
+    // }
+    this.giftService
+      .newGift({
+        id,
+        name,
+        price,
+        image,
+        vote,
+        comments,
+        description
+      } as NewGift)
+      .subscribe(gift => {
+        this.pushnewGift.push(gift);
+      });
   }
-  constructor() {}
+  // form submitted
 
   ngOnInit() {}
 }

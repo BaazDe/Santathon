@@ -1,9 +1,9 @@
 export class NewGift {
-  link: string;
+  id: number;
   name: string;
   price: number;
-  description: string;
   image: string;
-  yes_input: number;
-  no_input: number;
+  vote: [];
+  comments: [];
+  description: string;
 }
