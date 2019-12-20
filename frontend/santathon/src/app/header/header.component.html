@@ -27,7 +27,7 @@
       <form>
         <div class="form-modal">
           <label for="email">Email</label>
-          <input name="email" type="text" required />
+          <input name="email" type="email" required />
         </div>
         <div class="form-modal">
           <label for="price">Mot de passe</label>
@@ -39,17 +39,17 @@
       <form>
         <div class="form-modal">
           <label for="email">Email</label>
-          <input name="email" type="text" required />
+          <input #email name="email" type="email" required />
         </div>
         <div class="form-modal">
           <label for="pseudo">Pseudo</label>
-          <input name="pseudo" type="text" required />
+          <input #pseudo name="pseudo" type="text" required />
         </div>
         <div class="form-modal">
           <label for="password">Mot de passe</label>
-          <input name="password" type="password" required />
+          <input #password name="password" type="password" required />
         </div>
-        <button class="button" type="submit">Créer son compte</button>
+        <button class="button" type="submit" (click)="addUser(email.value, pseudo.value, password.value); email.value=''; pseudo.value=''; password.value=''">Créer son compte</button>
       </form>
     </div>
   </div>

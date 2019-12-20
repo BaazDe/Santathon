@@ -1,9 +1,9 @@
 export class Pokemon {
   id: number;
   name: string;
-  price: number;
+  price: string;
   image: string;
-  votes: [];
+  vote: [];
   comments: [];
   description: string;
 }
