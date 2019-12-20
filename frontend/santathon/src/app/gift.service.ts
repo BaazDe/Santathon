@@ -4,6 +4,7 @@ import { Gift } from "../gift";
 import { Pokemon } from "../pokemon";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
+import {catchError, tap} from "rxjs/operators";
 
 @Injectable({
   providedIn: "root"
@@ -20,4 +21,5 @@ export class GiftService {
   getPokemon(): Observable<Pokemon[]> {
     return this.http.get<Pokemon[]>(this.apiUrl);
   }
+
 }
