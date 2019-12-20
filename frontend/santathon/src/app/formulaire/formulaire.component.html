@@ -14,16 +14,17 @@
     </div>
     <div>
       <label for="name">Nom</label>
-      <input name="name" type="text" [(ngModel)]="newgift.name" required />
+      <input #name name="name" type="text" [(ngModel)]="newgift.name" required />
     </div>
     <div>
       <label for="price">Prix</label>
-      <input name="price" type="number" [(ngModel)]="newgift.price" required />
+      <input #price name="price" type="number" [(ngModel)]="newgift.price" required />
     </div>
 
     <div>
       <label for="description">Commentaire</label>
       <textarea
+        #description
         name="description"
         type="text"
         required
@@ -32,11 +33,11 @@
     </div>
     <div>
       <label for="image">Lien de l'image</label>
-      <input name="image" type="text" [(ngModel)]="newgift.image" required />
+      <input #image name="image" type="text" [(ngModel)]="newgift.image" required />
     </div>
     <div class="button-container">
       <button type="reset">Restaurer</button>
-      <button type="submit">Sauvegarder</button>
+      <button type="submit" (click)="onSubmit($event, name.value, price.valueAsNumber, image.value, description.value)">Sauvegarder</button>
     </div>
   </form>
 </div>

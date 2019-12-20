@@ -6,6 +6,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
 import { HttpHeaders } from "@angular/common/http";
+import {NewGift} from "./newgift";
 
 @Injectable({
   providedIn: "root"
@@ -20,7 +21,7 @@ export class GiftService {
 
   constructor(private http: HttpClient) {}
 
-  private apiUrl = "http://localhost:8000/api/users.json";
+  private apiUrl = "http://localhost:8000/api/gifts.json";
 
   getGift(): Gift[] {
     return GIFT;
@@ -29,7 +30,7 @@ export class GiftService {
   getPokemon(): Observable<Pokemon[]> {
     return this.http.get<Pokemon[]>(this.apiUrl);
   }
-  newGift(newgift: Pokemon): Observable<Pokemon> {
-    return this.http.post<Pokemon>(this.apiUrl, newgift, this.httpOptions);
+  newGift(newgift: NewGift): Observable<NewGift> {
+    return this.http.post<NewGift>(this.apiUrl, newgift, this.httpOptions);
   }
 }
