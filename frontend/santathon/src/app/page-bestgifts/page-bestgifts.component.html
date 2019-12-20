@@ -1,0 +1,30 @@
+<div class="headHeader">
+  <h2>Trouver les cadeaux les plus achetés et les mieux notés !</h2>
+  <p>
+    Ne passez plus 1h à chercher, les meilleurs sont ici !!
+  </p>
+</div>
+
+<div class="objectCard">
+  <div *ngFor="let pokemon of pokemon" class="objectCard-container">
+    <div class="objectCard-image">
+      <a routerLink="/solocard/{{ pokemon.id }}" routerLinkActive="active">
+        <img src="{{ pokemon.image }}" alt="gift"
+      /></a>
+    </div>
+    <div class="objectCard-info">
+      <div>
+        <h2>{{ pokemon.name }}</h2>
+        <p class="description">{{ pokemon.description }}</p>
+      </div>
+      <div class="objectCard-button">
+        <button class="yes-button">
+          <p>Oui c'est de la merde !</p>
+        </button>
+        <button class="no-button">
+          <p>Non tu as le seum ultime !</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
