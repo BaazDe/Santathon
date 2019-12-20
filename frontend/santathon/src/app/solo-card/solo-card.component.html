@@ -1,13 +1,11 @@
 <div class="objectCard">
-  <div *ngFor="let gift of gift" class="objectCard-container">
+  <div class="objectCard-container">
     <div class="objectCard-image">
-      <a routerLink="/solocard" routerLinkActive="active">
-        <img [src]="gift.img" alt="gift"
-      /></a>
+      <img [src]="gift.img" alt="gift" />
     </div>
     <div class="objectCard-info">
       <div>
-        <h2>{{ gift.title }}</h2>
+        <h2>Test {{ gift.title }}</h2>
         <p>{{ gift.description }}</p>
       </div>
       <div class="objectCard-button">

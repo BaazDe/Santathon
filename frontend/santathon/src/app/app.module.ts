@@ -9,11 +9,13 @@ import { FormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { ObjectCardComponent } from "./object-card/object-card.component";
 import { HttpClientModule } from "@angular/common/http";
+import { SoloCardComponent } from "./solo-card/solo-card.component";
 
 const appRoutes: Routes = [
   { path: "addagift", component: FormulaireComponent },
   { path: "home", component: ObjectCardComponent },
-  { path: "", redirectTo: "home", pathMatch: "full" }
+  { path: "", redirectTo: "home", pathMatch: "full" },
+  { path: "solocard", component: SoloCardComponent }
 ];
 
 @NgModule({
@@ -22,7 +24,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     FormulaireComponent,
-    ObjectCardComponent
+    ObjectCardComponent,
+    SoloCardComponent
   ],
   imports: [
     BrowserModule,
