@@ -68,8 +68,20 @@
   margin: 20px 6px;
   height: 80px;
   overflow-y: scroll;
+}
 
-  ::-webkit-scrollbar-track {
-    display: none;
+.headHeader {
+  margin: 0 auto;
+  width: 60%;
+  h2 {
+    font-weight: bold;
+    font-size: 23px;
+    text-align: center;
+    margin: 5px 0;
+  }
+  p {
+    text-align: center;
+    font-size: 18px;
+    margin: 5px 0;
   }
 }
