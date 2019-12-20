@@ -33,4 +33,9 @@ export class UserService {
     return this.http.post<User>(this.apiUrl, user, this.httpOptions);
   }
 
+  // NOT USED FOR NOW || FOR AUTHENTIFICATION
+  getUser (): Observable<User[]> {
+    return this.http.get<User[]>(this.apiUrl)
+  }
+
 }

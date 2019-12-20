@@ -33,6 +33,9 @@ export class HeaderComponent implements OnInit {
     this.UserService.addUser({ email, pseudo, password } as User)
       .subscribe(user => {
         this.users.push(user);
+        window.location.reload();
       });
   }
+
+
 }
