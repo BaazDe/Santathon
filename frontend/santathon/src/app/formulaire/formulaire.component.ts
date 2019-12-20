@@ -49,7 +49,8 @@ export class FormulaireComponent implements OnInit {
         description
       } as NewGift)
       .subscribe(gift => {
-        this.pushnewGift.push(gift);
+        this.newgift = gift;
+        console.log(this.newgift);
       });
   }
   // form submitted
